@@ -8,7 +8,7 @@ function homeHeader() {
   chefImage.alt = "Chef";
 
   // Lodash, now imported by this script
-  element.innerHTML = _.join(["jordan's restaurant"], " ");
+  element.innerHTML = "Jordan's restaurant";
 
   element.classList.add("globalNav");
   element.appendChild(chefImage);
@@ -21,8 +21,7 @@ function headerNav() {
   const element = document.createElement("nav");
   const btn1 = document.createElement("button");
   const btn2 = document.createElement("button");
-
-  const total = element.appendChild(btn1);
+  const btn3 = document.createElement("button");
 
   btn1.innerHTML = "Home";
   btn1.classList.add("homeBtn");
@@ -30,8 +29,17 @@ function headerNav() {
   btn2.innerHTML = "Menu";
   btn2.classList.add("menuBtn");
 
-  return total;
+  btn3.innerHTML = "Contact";
+  btn3.classList.add("contactBtn");
+
+  element.appendChild(btn1);
+  element.appendChild(btn2);
+  element.appendChild(btn3);
+
+  return element;
 }
+
+function makeButton() {}
 
 function homeBody() {
   const element = document.createElement("section");
