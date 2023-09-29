@@ -1,0 +1,210 @@
+:root {
+  font-family: 'arial', 'helvetica', sans-serif;
+}
+
+html {
+  background-color: rgb(250, 200, 105);
+}
+
+h1 {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+header {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  justify-content: space-around;
+  padding: 1rem 0;
+  background-color: rgba(87, 65, 65, 0.62);
+}
+
+#content {
+  /* background: url('') 50% 0% no-repeat; */
+  height: 100vh;
+  width: 100vw;
+}
+
+.title {
+
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  display: flex;
+}
+
+.tabs > ul {
+  display: flex;
+  list-style-type: none;
+  align-content: flex-end;
+  align-items: flex-end;
+}
+
+.tabs > ul > li {
+  margin: 1rem 3rem 0 3rem;
+  font-size: 1.5rem;
+}
+
+.tabs > ul > li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.home-section, .contact-section {
+  position: relative;
+  padding: 1rem 2rem;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: rgba(87, 65, 65, 0.62);
+  color: white;
+}
+
+.menu-section {
+  position: relative;
+  padding: 1rem 2rem;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  justify-content: center;
+  background-color: rgba(87, 65, 65, 0.62);
+  color: white;
+  overflow: visible;
+}
+
+.title > h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card {
+  width: 250px;
+  height: 140px;
+  margin: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.card > h5 {
+  font-size: 1.75rem;
+  background-color: rgba(87, 65, 65, 0.62);
+}
+
+.card > h6 {
+  font-size: 1.5rem;
+  background-color: rgba(87, 65, 65, 0.62);
+  padding-bottom: 0.5rem;
+}
+
+.caesar {
+  background: url('../assets/menu/caesar.jpeg') no-repeat;
+  background-size: 100%;
+  grid-column-start: 3;
+}
+
+.fish {
+  background: url('../assets/menu/fish.jpeg') no-repeat;
+  background-size: 100%;
+  grid-column-start: 2;
+}
+
+.pozole {
+  background: url('../assets/menu/pozole.jpeg') no-repeat;
+  background-size: 100%;
+}
+
+.filet-mignon {
+  background: url('../assets/menu/chocolate.jpeg') no-repeat;
+  background-size: 100%;
+}
+
+.lobster {
+  background: url('../assets/menu/lobster.jpeg') no-repeat;
+  background-size: 100%;
+}
+
+.wagyu {
+  background: url('../assets/menu/wagyu.webp') no-repeat;
+  background-size: 100%;
+}
+
+.pheasant{
+  background: url('../assets/menu/pheasant.jpeg') no-repeat;
+  background-size: 100%;
+}
+
+.hibiscus{
+  background: url('../assets/menu/hibiscus.jpeg') no-repeat;
+  background-size: 100%;
+}
+
+
+
+.footer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  bottom: 0;
+  height: 1.5rem;
+  width: 100%;
+  background-color: rgba(87, 65, 65, 0.62);
+  color: white;
+}
+
+.anchor{
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 720px) {
+
+  header {
+    display: block;
+  }
+
+  .menu-section {
+    display: block;
+    top: 150px;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 175;
+    height: 100;
+  }
+
+  .tabs > ul > li {
+    margin: 1rem 1rem 0 1rem;
+  }
+}
