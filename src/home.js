@@ -1,68 +1,41 @@
-import _ from "lodash";
-import "./styles.css";
+const section = () => {
+  const homeSect = document.createElement("section");
+  homeSect.classList.add("home-section");
 
-function homeHeader() {
-  const element = document.createElement("header");
-  const chefImage = document.createElement("img");
-  chefImage.src = "images/chefImg.png";
-  chefImage.alt = "Chef";
+  const title = document.createElement("h1");
+  const subTitleOne = document.createElement("h6");
+  const subTitleTwo = document.createElement("h6");
 
-  // Lodash, now imported by this script
-  element.innerHTML = "Jordan's restaurant";
+  title.textContent = "Before I coded, I was a chef";
+  subTitleOne.textContent = "Here are some of the dishes I helped make";
+  subTitleTwo.textContent = "I hope you enjoy";
 
-  element.classList.add("globalNav");
-  element.appendChild(chefImage);
-  chefImage.classList.add("chefImg");
+  homeSect.appendChild(title);
+  homeSect.appendChild(subTitleOne);
+  homeSect.appendChild(subTitleTwo);
 
-  return element;
-}
+  return homeSect;
+};
 
-function headerNav() {
-  const element = document.createElement("nav");
-  const btn1 = document.createElement("button");
-  const btn2 = document.createElement("button");
-  const btn3 = document.createElement("button");
+const homeActive = () => {
+  const btns = Array.from(document.querySelectorAll(".btn"));
+  btns.forEach((btn) => {
+    if (btn.classList.contains("active")) {
+      btn.classList.remove("active");
+    }
+  });
+  const homeBtn = document.getElementById("home");
+  homeBtn.classList.add("active");
+};
 
-  btn1.innerHTML = "Home";
-  btn1.classList.add("homeBtn");
+const home = () => {
+  homeActive();
+  let sectionAppend = section();
+  let sectionRemove = document.querySelector("section");
 
-  btn2.innerHTML = "Menu";
-  btn2.classList.add("menuBtn");
+  const content = document.getElementById("content");
+  content.removeChild(sectionRemove);
+  content.appendChild(sectionAppend);
+};
 
-  btn3.innerHTML = "Contact";
-  btn3.classList.add("contactBtn");
-
-  element.appendChild(btn1);
-  element.appendChild(btn2);
-  element.appendChild(btn3);
-
-  return element;
-}
-
-function makeButton() {}
-
-function homeBody() {
-  const element = document.createElement("section");
-
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(["Dishes I've made as a chef"], " ");
-  element.classList.add("globalBody");
-
-  return element;
-}
-function homeFooter() {
-  const element = document.createElement("footer");
-
-  // Lodash, now imported by this script
-  element.innerHTML = "Footer";
-  element.classList.add("globalFooter");
-
-  return element;
-}
-
-document.body.appendChild(homeHeader());
-document.body.appendChild(headerNav());
-document.body.appendChild(homeBody());
-document.body.appendChild(homeFooter());
-
-export default loadHome;
+export default home;
