@@ -65,15 +65,13 @@ const footer = () => {
   const para = document.createElement("p");
   const link = document.createElement("a");
 
-  const linkText = document.createTextNode("littleDragonShrimp");
+  const linkText = document.createTextNode(" littleDragonShrimp");
 
-  linkText.classList.add("anchor");
   link.appendChild(linkText);
-  link.title = "my title text";
   link.href = "https://github.com/littledragonshrimp";
 
   para.classList.add("footer");
-  para.textContent = "`Made by `";
+  para.textContent = "Made by ";
   para.appendChild(link);
 
   foot.appendChild(para);

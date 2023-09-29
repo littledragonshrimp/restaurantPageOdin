@@ -7,7 +7,7 @@ const section = () => {
   const subTitleTwo = document.createElement("h6");
   const subTitleThree = document.createElement("h6");
 
-  title.textContent = "We would love to hear from you!";
+  title.textContent = "Example contact info here!";
   subTitleOne.textContent = "Phone: 555.555.1234";
   subTitleTwo.textContent = "Email: info@theopentable.com";
   subTitleThree.textContent = "Address: 123 Main St";
